@@ -1,0 +1,284 @@
+Java Introduction, JDK & Eclipse Installation
+
+
+
+What is Java?
+
+Java is a high-level, object-oriented programming language developed by Sun Microsystems in 1995.
+
+Current owner:
+Oracle Corporation.
+
+Java follows the principle:
+
+Write Once, Run Anywhere (WORA)
+
+Meaning one Java program can run on Windows, Linux, and Mac without changing the code.
+
+Features of Java
+
+Platform Independent
+
+Object Oriented
+
+Secure
+
+Robust
+
+Portable
+
+Multithreaded
+
+High Performance
+
+Dynamic
+
+ 
+
+Java Architecture
+
+Java Program (.java)
+
+ 
+
+↓
+
+ 
+
+Compiler (javac)
+
+ 
+
+↓
+
+ 
+
+Bytecode (.class)
+
+ 
+
+↓
+
+ 
+
+JVM
+
+ 
+
+↓
+
+ 
+
+Machine Code
+
+ 
+
+↓
+
+ 
+
+Output
+
+JDK
+
+JDK = Java Development Kit
+
+Contains:
+
+JRE
+
+Compiler (javac)
+
+Debugger
+
+Development Tools
+
+Used for writing Java programs.
+
+JRE
+
+Java Runtime Environment
+
+Contains:
+
+JVM
+
+Libraries
+
+Used to run Java programs.
+
+JVM
+
+Java Virtual Machine
+
+Responsible for:
+
+Loading class
+
+Verifying bytecode
+
+Executing program
+
+Memory Management
+
+Difference
+
+JDK
+
+JRE
+
+JVM
+
+Development
+
+Execution
+
+Executes bytecode
+
+Has compiler
+
+No compiler
+
+No compiler
+
+Contains JRE
+
+Contains JVM
+
+Inside JRE
+
+Installing Java
+
+Download JDK
+
+Install
+
+Set JAVA_HOME
+
+Set PATH
+
+Verify
+
+java -version
+
+ 
+
+javac -version
+
+Eclipse Installation
+
+Install Eclipse
+
+Create Workspace
+
+File → New → Java Project
+
+Create Class
+
+First Java Program
+
+public class Hello {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        System.out.println("Hello Java");
+
+ 
+
+    }
+
+ 
+
+}
+
+Output
+
+Hello Java
+
+Interview Questions
+
+Q1. Why Java is platform independent?
+
+Answer:
+
+Because Java code is converted into Bytecode which runs on JVM.
+
+Q2. Difference between JDK and JRE?
+
+JDK is used for development.
+
+JRE is used for execution.
+
+Q3. What is JVM?
+
+Virtual machine that executes Java bytecode.
+
+Q4. Explain WORA.
+
+Write Once Run Anywhere.
+
+Q5. Why Java is Secure?
+
+No pointers
+
+Bytecode verification
+
+JVM security
+
+Practice Programs
+
+Program 1
+
+Print your name.
+
+public class Demo {
+
+ 
+
+public static void main(String args[]){
+
+ 
+
+System.out.println("John");
+
+ 
+
+}
+
+ 
+
+}
+
+Coding Challenge
+
+Create a Java program that prints
+
+Name :
+
+Age :
+
+City :
+
+College :
+
+without taking input.
+
+Quick Revision
+
+Java is OOP
+
+JDK = Development
+
+JRE = Runtime
+
+JVM = Execution
+
+Bytecode = Platform Independent
+
+javac = Compiler
+
+java = Interpreter
