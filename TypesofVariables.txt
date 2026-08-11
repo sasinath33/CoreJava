@@ -1,0 +1,679 @@
+Variables
+
+----------
+
+Container that is used for storing data
+
+Types of Variables
+
+--------------------
+
+1. local variable
+
+2. static variable
+
+3. instance variable
+
+4. final variable
+
+========================
+
+Syntax:
+
+-----
+
+datatype variableName=value;
+
+Name: Raji
+
+class: MCA
+
+College: KCG 
+
+RollNumber: MCA123456789
+
+pincode: 600119
+
+session :'B'
+
+Datatype
+
+---------
+
+indicates that value of data 
+
+Primitive Datatype
+
+Non-Primitive Datatype
+
+==========================================
+
+Primitive Datatype having fixed range
+
+----------------------------
+
+8 
+
+---
+
+WholeNumbers --> byte, short, int, long
+
+Decimal Number --> float,double
+
+character --> single character --> char
+
+right/wrong --> Boolean (true,false)
+
+===============================
+
+Non-Primitive Datatype
+
+------------------------
+
+String , Arrays, Collections
+
+String ="abcdefghijklmnopqrstuvwxyz"
+
+================================================
+
+Type casting
+
+---------------------
+
+1. implicit typecasting
+
+2. explicit typecasting
+
+Boolean -->byte -->short --> char -->int --> float -->long --> double 
+
+static method --> non static call --> doesn't allowed directly (We can use object)
+
+non-static method --> static method --> allowed
+
+=======================================
+
+Types of variable
+
+--------------------
+
+1. Local Variable --> Accessible for only that method  and must have initialized before we use
+
+2. static variable --> without object creation we can use.. dont use static variable inside of method .. accessible from anywhere
+
+                       outside of methods and inside of class
+
+3. instance variable --> accessible from anywhere but using object. Outside of method & inside of class 
+
+static variable & instance variable = Global variable
+
+Global variable having default value for all the datatypes
+
+---------------------------------------------------------
+
+byte short int long --> 0
+
+float double --> 0.0
+
+char --> ' '
+
+Boolean --> false
+
+String --> null
+
+=========================
+
+4. final Variable --> cant be change and must be initialized
+
+================================================ 
+
+ 
+
+
+
+Videos
+0%
+Variables and Datatype
+Fullscreen
+1. What is a Variable?
+
+A variable is a named memory location used to store data. Its value can change during program execution.
+
+Syntax:
+
+dataType variableName = value;
+
+Example:
+
+int age = 25;
+
+String name = "John";
+
+double salary = 35000.50;
+
+2. Why Do We Use Variables?
+
+Variables help us:
+
+Store data
+
+Reuse values
+
+Perform calculations
+
+Improve code readability
+
+Example Without Variable:
+
+System.out.println(5000);
+
+System.out.println(5000 + 1000);
+
+Example With Variable:
+
+int salary = 5000;
+
+System.out.println(salary);
+
+System.out.println(salary + 1000);
+
+3. Rules for Naming Variables
+
+✅ Valid:
+
+studentName
+
+age
+
+salary123
+
+_marks
+
+$price
+
+❌ Invalid:
+
+123age
+
+student-name
+
+int
+
+Rules:
+
+Must start with a letter, _, or $.
+
+Cannot start with a number.
+
+Cannot use Java keywords.
+
+Java is case-sensitive (age and Age are different).
+
+4. Data Types in Java
+
+Java data types are divided into two categories:
+
+Data Types
+
+│
+
+├── Primitive
+
+│   ├── byte
+
+│   ├── short
+
+│   ├── int
+
+│   ├── long
+
+│   ├── float
+
+│   ├── double
+
+│   ├── char
+
+│   └── boolean
+
+│
+
+└── Non-Primitive
+
+    ├── String
+
+    ├── Array
+
+    ├── Class
+
+    └── Interface
+
+5. Primitive Data Types
+
+Data Type
+
+Size
+
+Default Value
+
+Example
+
+byte
+
+1 byte
+
+0
+
+100
+
+short
+
+2 bytes
+
+0
+
+2000
+
+int
+
+4 bytes
+
+0
+
+50000
+
+long
+
+8 bytes
+
+0L
+
+100000L
+
+float
+
+4 bytes
+
+0.0f
+
+10.5f
+
+double
+
+8 bytes
+
+0.0
+
+20.55
+
+char
+
+2 bytes
+
+'\u0000'
+
+'A'
+
+boolean
+
+1 bit (logical)
+
+false
+
+true
+
+byte
+
+byte age = 25;
+
+System.out.println(age);
+
+Output:
+
+25
+
+short
+
+short marks = 500;
+
+System.out.println(marks);
+
+int
+
+int salary = 50000;
+
+System.out.println(salary);
+
+long
+
+long population = 8000000000L;
+
+System.out.println(population);
+
+Note: Add L at the end of long values.
+
+float
+
+float price = 99.99f;
+
+System.out.println(price);
+
+Note: Add f at the end.
+
+double
+
+double percentage = 98.75;
+
+System.out.println(percentage);
+
+char
+
+char grade = 'A';
+
+System.out.println(grade);
+
+Important: Character values use single quotes (' ').
+
+boolean
+
+boolean isPassed = true;
+
+System.out.println(isPassed);
+
+6. Non-Primitive Data Types
+
+Examples:
+
+String
+
+Array
+
+Class
+
+Interface
+
+String Example
+
+String name = "Alice";
+
+System.out.println(name);
+
+Output:
+
+Alice
+
+7. Declaration & Initialization
+
+Declaration
+
+int age;
+
+Initialization
+
+age = 25;
+
+Declaration + Initialization
+
+int age = 25;
+
+8. Multiple Variable Declaration
+
+int a = 10, b = 20, c = 30;
+
+ 
+
+System.out.println(a);
+
+System.out.println(b);
+
+System.out.println(c);
+
+9. Constant (final Keyword)
+
+A constant's value cannot be changed.
+
+final double PI = 3.14159;
+
+ 
+
+System.out.println(PI);
+
+❌ Invalid:
+
+PI = 5.5;
+
+This causes a compilation error.
+
+10. Type Casting
+
+Type casting means converting one data type into another.
+
+There are two types:
+
+Implicit (Widening)
+
+Explicit (Narrowing)
+
+Implicit Type Casting (Automatic)
+
+Small data type → Large data type
+
+byte → short → int → long → float → double
+
+Example:
+
+int number = 100;
+
+double value = number;
+
+ 
+
+System.out.println(value);
+
+Output:
+
+100.0
+
+Explicit Type Casting (Manual)
+
+Large data type → Small data type
+
+double value = 99.99;
+
+ 
+
+int number = (int) value;
+
+ 
+
+System.out.println(number);
+
+Output:
+
+99
+
+Note: Decimal part is removed.
+
+11. Type Casting Example
+
+public class CastingDemo {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        int a = 10;
+
+        double b = a;
+
+ 
+
+        System.out.println(b);
+
+ 
+
+        double c = 55.99;
+
+        int d = (int) c;
+
+ 
+
+        System.out.println(d);
+
+ 
+
+    }
+
+ 
+
+}
+
+Output:
+
+10.0
+
+55
+
+12. Default Values (Instance Variables)
+
+Data Type
+
+Default Value
+
+byte
+
+0
+
+short
+
+0
+
+int
+
+0
+
+long
+
+0L
+
+float
+
+0.0f
+
+double
+
+0.0
+
+char
+
+'\u0000'
+
+boolean
+
+false
+
+String
+
+null
+
+Note: Local variables do not have default values and must be initialized before use.
+
+13. Common Errors
+
+1. Assigning Decimal to int
+
+int number = 10.5;
+
+❌ Error
+
+Correct:
+
+double number = 10.5;
+
+2. Missing f for float
+
+float price = 10.5;
+
+❌ Error
+
+Correct:
+
+float price = 10.5f;
+
+3. Missing L for large long values
+
+long value = 8000000000;
+
+❌ Error
+
+Correct:
+
+long value = 8000000000L;
+
+4. Using Double Quotes for char
+
+char grade = "A";
+
+❌ Error
+
+Correct:
+
+char grade = 'A';
+
+14. Interview Questions & Answers
+
+1. What is a variable?
+
+Answer: A variable is a named memory location used to store data that can change during program execution.
+
+2. What are primitive data types?
+
+Answer: Primitive data types are built-in data types used to store simple values such as int, char, boolean, and double.
+
+3. Difference between float and double?
+
+float
+
+double
+
+4 bytes
+
+8 bytes
+
+Less precision
+
+More precision
+
+Suffix f required
+
+No suffix required
+
+4. Difference between char and String?
+
+char
+
+String
+
+Stores one character
+
+Stores multiple characters
+
+Uses single quotes
+
+Uses double quotes
+
+5. What is type casting?
+
+Answer: Type casting is the process of converting one data type into another.
+
+6. What is widening?
+
+Answer: Automatic conversion from a smaller data type to a larger data type.
+
+7. What is narrowing?
+
+Answer: Manual conversion from a larger data type to a smaller data type using explicit casting.
+
+8. What is the purpose of the final keyword?
+
+Answer: It is used to declare constants whose values cannot be changed after initialization.
