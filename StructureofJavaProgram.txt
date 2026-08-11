@@ -1,0 +1,503 @@
+1. Structure of a Java Program
+
+Every Java program follows a standard structure.
+
+Basic Structure
+
+// Package Declaration (Optional)
+
+ 
+
+package com.demo;
+
+ 
+
+// Import Statements (Optional)
+
+ 
+
+import java.util.Scanner;
+
+ 
+
+// Class Declaration
+
+ 
+
+public class Hello {
+
+ 
+
+    // Main Method
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        // Statements
+
+ 
+
+        System.out.println("Welcome to Java");
+
+ 
+
+    }
+
+ 
+
+}
+
+Structure Explanation
+
+Part
+
+Description
+
+Package
+
+Organizes classes into folders
+
+Import
+
+Imports predefined classes/packages
+
+Class
+
+Blueprint containing methods and variables
+
+Main Method
+
+Entry point of the program
+
+Statements
+
+Instructions executed by JVM
+
+2. Execution Flow of Java Program
+
+When you run a Java program:
+
+Write Code (.java)
+
+ 
+
+↓
+
+ 
+
+Compile (javac)
+
+ 
+
+↓
+
+ 
+
+Bytecode (.class)
+
+ 
+
+↓
+
+ 
+
+JVM
+
+ 
+
+↓
+
+ 
+
+Output
+
+Example
+
+public class Test {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        System.out.println("Java");
+
+ 
+
+    }
+
+ 
+
+}
+
+Output
+
+Java
+
+3. Class Declaration
+
+Every Java program must have at least one class.
+
+Syntax
+
+public class ClassName {
+
+ 
+
+}
+
+Example
+
+public class Student {
+
+ 
+
+}
+
+Rules
+
+Class name should start with a capital letter.
+
+One public class per file.
+
+File name and public class name must be the same.
+
+Correct
+
+public class Employee{
+
+ 
+
+}
+
+File Name
+
+Employee.java
+
+Wrong
+
+public class Employee {
+
+ 
+
+}
+
+File Name
+
+Demo.java ❌
+
+4. Main Method
+
+The main method is the starting point of every Java application.
+
+Syntax
+
+public static void main(String[] args)
+
+Breakdown
+
+Keyword
+
+Meaning
+
+Public
+
+Accessible from anywhere
+
+Static
+
+No object required
+
+Void
+
+Returns nothing
+
+Main
+
+JVM searches this method
+
+String[] args
+
+Command-line arguments
+
+Example
+
+public class Demo {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        System.out.println("Hello");
+
+ 
+
+    }
+
+ 
+
+}
+
+5. Understanding System.out.println()
+
+System.out.println("Hello Java");
+
+Breakdown
+
+Part
+
+Meaning
+
+System
+
+Predefined class
+
+Out
+
+Output stream
+
+println()
+
+Prints text and moves to the next line
+
+Example
+
+System.out.println("Apple");
+
+System.out.println("Orange");
+
+Output
+
+Apple
+
+Orange
+
+6. print() vs println()
+
+print()
+
+System.out.print("Java");
+
+System.out.print("Programming");
+
+Output
+
+JavaProgramming
+
+println()
+
+System.out.println("Java");
+
+System.out.println("Programming");
+
+Output
+
+Java
+
+Programming
+
+7. Java Naming Convention
+
+Naming conventions improve readability and maintainability.
+
+Class Name
+
+Start with Capital Letter.
+
+Use PascalCase.
+
+Correct
+
+Student
+
+EmployeeDetails
+
+BankAccount
+
+Wrong
+
+student
+
+employee details
+
+1Student
+
+Variable Name
+
+Start with lowercase.
+
+Use camelCase.
+
+Correct
+
+studentName
+
+employeeSalary
+
+mobileNumber
+
+Wrong
+
+StudentName
+
+student_name
+
+1salary
+
+Method Name
+
+Always use camelCase.
+
+Correct
+
+display()
+
+calculateTotal()
+
+printMarks()
+
+Package Name
+
+Always lowercase.
+
+Correct
+
+com.company.project
+
+student.management
+
+Wrong
+
+Student.Management
+
+Constant Name
+
+Use uppercase with underscores.
+
+MAX_SIZE
+
+PI_VALUE
+
+DEFAULT_PORT
+
+8. Java Keywords
+
+Keywords are reserved words with predefined meanings.
+
+Examples
+
+class
+
+public
+
+private
+
+void
+
+int
+
+if
+
+else
+
+return
+
+new
+
+switch
+
+while
+
+for
+
+static
+
+Note: Keywords cannot be used as variable or class names.
+
+Wrong
+
+int class = 10; // Error
+
+9. Identifiers
+
+Identifiers are names given to:
+
+Variables
+
+Classes
+
+Methods
+
+Packages
+
+Rules
+
+Can contain letters, digits, _, $.
+
+Cannot start with a digit.
+
+Cannot be a keyword.
+
+Case-sensitive.
+
+Correct
+
+student
+
+Student
+
+student123
+
+_marks
+
+Wrong
+
+123student
+
+class
+
+student-name
+
+10. Java Comments
+
+Comments are ignored by the compiler and are used to explain code.
+
+Single-Line Comment
+
+// This is a single-line comment
+
+ 
+
+System.out.println("Java");
+
+Multi-Line Comment
+
+/*
+
+This
+
+is
+
+a
+
+multi-line
+
+comment.
+
+*/
+
+Documentation Comment (JavaDoc)
+
+/**
+
+ * This method prints a message.
+
+ */
+
+Used to generate documentation.
