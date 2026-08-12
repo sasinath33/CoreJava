@@ -1,0 +1,1629 @@
+1. What is an Operator?
+
+An operator is a special symbol used to perform operations on variables and values.
+
+Example:
+
+int a = 10;
+
+int b = 20;
+
+int sum = a + b;
+
+Here:
+
+= → Assignment Operator
+
++ → Arithmetic Operator
+
+Types of Operators in Java
+
+Operators
+
+│
+
+├── Arithmetic Operators
+
+├── Relational Operators
+
+├── Logical Operators
+
+├── Assignment Operators
+
+├── Unary Operators
+
+├── Increment/Decrement Operators
+
+├── Ternary Operator
+
+└── Bitwise Operators
+
+Note: In this chapter, we will focus on the first four types.
+
+2. Arithmetic Operators
+
+Arithmetic operators are used to perform mathematical calculations.
+
+Operator
+
+Meaning
+
+Example
+
++
+
+Addition
+
+a + b
+
+-
+
+Subtraction
+
+a - b
+
+*
+
+Multiplication
+
+a * b
+
+/
+
+Division
+
+a / b
+
+%
+
+Modulus (Remainder)
+
+a % b
+
+Addition (+)
+
+public class Addition {
+
+    public static void main(String[] args) {
+
+ 
+
+        int a = 20;
+
+        int b = 10;
+
+ 
+
+        System.out.println(a + b);
+
+ 
+
+    }
+
+}
+
+Output
+
+30
+
+Subtraction (-)
+
+int a = 20;
+
+int b = 10;
+
+ 
+
+System.out.println(a - b);
+
+Output
+
+10
+
+Multiplication (*)
+
+int a = 10;
+
+int b = 5;
+
+ 
+
+System.out.println(a * b);
+
+Output
+
+50
+
+Division (/)
+
+int a = 20;
+
+int b = 5;
+
+ 
+
+System.out.println(a / b);
+
+Output
+
+4
+
+Important Note
+
+If both operands are integers, Java performs integer division.
+
+System.out.println(10 / 3);
+
+Output
+
+3
+
+To get the decimal value:
+
+System.out.println(10 / 3);
+
+Output
+
+3.3333333333333335
+
+Modulus (%)
+
+Returns the remainder after division.
+
+System.out.println(10 % 3);
+
+Output
+
+1
+
+Another Example
+
+System.out.println(20 % 5);
+
+Output
+
+0
+
+3. Relational Operators
+
+Relational operators compare two values and return a boolean (true or false).
+
+Operator
+
+Meaning
+
+==
+
+Equal to
+
+!=
+
+Not equal to
+
+> 
+
+Greater than
+
+< 
+
+Less than
+
+>=
+
+Greater than or equal
+
+<=
+
+Less than or equal
+
+Equal To (==)
+
+int a = 10;
+
+int b = 10;
+
+ 
+
+System.out.println(a == b);
+
+Output
+
+true
+
+Not Equal To (!=)
+
+System.out.println(10 != 5);
+
+Output
+
+true
+
+Greater Than (>)
+
+System.out.println(20 > 10);
+
+Output
+
+true
+
+Less Than (<)
+
+System.out.println(5 < 10);
+
+Output
+
+true
+
+Greater Than or Equal To (>=)
+
+System.out.println(10 >= 10);
+
+Output
+
+true
+
+Less Than or Equal To (<=)
+
+System.out.println(8 <= 5);
+
+Output
+
+false
+
+4. Logical Operators
+
+Logical operators are used to combine multiple conditions.
+
+Operator
+
+Meaning
+
+&&
+
+Logical AND
+
+||
+
+Logical OR
+
+!
+
+Logical NOT
+
+Logical AND (&&)
+
+Returns true only if both conditions are true.
+
+int age = 25;
+
+ 
+
+System.out.println(age > 18 && age < 60);
+
+Output
+
+true
+
+Truth Table
+
+Condition 1
+
+Condition 2
+
+Result
+
+true
+
+true
+
+true
+
+true
+
+false
+
+false
+
+false
+
+true
+
+false
+
+false
+
+false
+
+false
+
+Logical OR (||)
+
+Returns true if at least one condition is true.
+
+int age = 15;
+
+ 
+
+System.out.println(age < 18 || age > 60);
+
+Output
+
+true
+
+Truth Table
+
+Condition 1
+
+Condition 2
+
+Result
+
+true
+
+true
+
+true
+
+true
+
+false
+
+true
+
+false
+
+true
+
+true
+
+false
+
+false
+
+false
+
+Logical NOT (!)
+
+Reverses the result.
+
+boolean isJavaFun = true;
+
+ 
+
+System.out.println(!isJavaFun);
+
+Output
+
+false
+
+5. Assignment Operators
+
+Assignment operators assign values to variables.
+
+Operator
+
+Meaning
+
+Example
+
+=
+
+Assign
+
+a = 10
+
++=
+
+Add and assign
+
+a += 5
+
+-=
+
+Subtract and assign
+
+a -= 5
+
+*=
+
+Multiply and assign
+
+a *= 5
+
+/=
+
+Divide and assign
+
+a /= 5
+
+%=
+
+Modulus and assign
+
+a %= 5
+
+Simple Assignment (=)
+
+int a = 10;
+
+System.out.println(a);
+
+Add and Assign (+=)
+
+int a = 10;
+
+ 
+
+a += 5;   // a=a+5;
+
+ 
+
+System.out.println(a);
+
+Output
+
+15
+
+Equivalent to:
+
+a = a + 5;
+
+Subtract and Assign (-=)
+
+int a = 20;
+
+ 
+
+a -= 5;
+
+ 
+
+System.out.println(a);
+
+Output
+
+15
+
+Multiply and Assign (*=)
+
+int a = 10;
+
+ 
+
+a *= 3;
+
+ 
+
+System.out.println(a);
+
+Output
+
+30
+
+Divide and Assign (/=)
+
+int a = 20;
+
+ 
+
+a /= 5;
+
+ 
+
+System.out.println(a);
+
+Output
+
+4
+
+Modulus and Assign (%=)
+
+int a = 20;
+
+ 
+
+a %= 3;
+
+ 
+
+System.out.println(a);
+
+Output
+
+2
+
+6. Operator Precedence
+
+Java evaluates operators according to precedence.
+
+Priority
+
+Operator
+
+1
+
+()
+
+2
+
+*, /, %
+
+3
+
++, -
+
+4
+
+Relational Operators
+
+5
+
+Logical Operators
+
+6
+
+Assignment Operators
+
+Example
+
+int result = 10 + 5 * 2;
+
+ 
+
+System.out.println(result);
+
+Output
+
+20
+
+Explanation:
+
+5 * 2 = 10
+
+10 + 10 = 20
+
+7. Common Mistakes
+
+Mistake 1: Using = Instead of ==
+
+❌ Wrong
+
+if (a = 10)
+
+✅ Correct
+
+if (a == 10)
+
+Mistake 2: Division by Zero
+
+int a = 10;
+
+int b = 0;
+
+ 
+
+System.out.println(a / b);
+
+Output
+
+ArithmeticException
+
+Mistake 3: Integer Division
+
+System.out.println(7 / 2);
+
+Output
+
+3
+
+Use:
+
+System.out.println(7.0 / 2);
+
+Output
+
+3.5
+
+8. Interview Questions & Answers
+
+1. What is an operator?
+
+Answer: An operator is a symbol used to perform operations on variables or values.
+
+2. What is the difference between = and ==?
+
+=
+
+==
+
+Assigns a value
+
+Compares two values
+
+3. What is the difference between && and ||?
+
+&& returns true only if all conditions are true.
+
+|| returns true if at least one condition is true.
+
+4. What does % do?
+
+Answer: It returns the remainder after division.
+
+Example:
+
+10 % 3
+
+Output:
+
+1
+
+5. What happens if we divide by zero?
+
+Answer: An ArithmeticException occurs when dividing an integer by zero.
+
+6. What is operator precedence?
+
+Answer: It is the order in which Java evaluates operators in an expression.
+
+9. Practice Programs
+
+Program 1: Arithmetic Operations
+
+public class ArithmeticDemo {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        int a = 15;
+
+        int b = 4;
+
+ 
+
+        System.out.println("Addition: " + (a + b));
+
+        System.out.println("Subtraction: " + (a - b));
+
+        System.out.println("Multiplication: " + (a * b));
+
+        System.out.println("Division: " + (a / b));
+
+        System.out.println("Modulus: " + (a % b));
+
+ 
+
+    }
+
+ 
+
+}
+
+Program 2: Relational Operators
+
+public class RelationalDemo {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        int x = 10;
+
+        int y = 20;
+
+ 
+
+        System.out.println(x == y);
+
+        System.out.println(x != y);
+
+        System.out.println(x < y);
+
+        System.out.println(x > y);
+
+ 
+
+    }
+
+ 
+
+}
+
+Program 3: Logical Operators
+
+public class LogicalDemo {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        int age = 22;
+
+ 
+
+        System.out.println(age >= 18 && age <= 60);
+
+        System.out.println(age < 18 || age > 60);
+
+        System.out.println(!(age >= 18));
+
+ 
+
+    }
+
+ 
+
+}
+
+Program 4: Assignment Operators
+
+public class AssignmentDemo {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        int num = 10;
+
+ 
+
+        num += 5;
+
+        System.out.println(num);
+
+ 
+
+        num *= 2;
+
+        System.out.println(num);
+
+ 
+
+        num -= 10;
+
+        System.out.println(num);
+
+ 
+
+    }
+
+ 
+
+}
+
+10. Practice Questions
+
+Basic
+
+Write a program to perform all arithmetic operations on two numbers.
+
+Find the remainder when 25 is divided by 4.
+
+Compare two numbers using all relational operators.
+
+Intermediate
+
+Check whether a person is eligible to vote (age >= 18).
+
+Check whether a student has passed if marks are greater than or equal to 35.
+
+Challenge
+
+Create a Java program to:
+
+Store two numbers.
+
+Display their sum, difference, product, quotient, and remainder.
+
+Compare them using all relational operators.
+
+Check if both numbers are positive using the && operator.
+
+11. Chapter Summary
+
+Operators perform operations on variables and values.
+
+Arithmetic operators: +, -, *, /, %.
+
+Relational operators return true or false.
+
+Logical operators combine or negate conditions.
+
+Assignment operators simplify updating variable values.
+
+Operator precedence determines the order of evaluation.
+
+Use == for comparison and = for assignment.
+
+1. String Concatenation
+
+What is String Concatenation?
+
+Concatenation means joining two or more strings using the + operator.
+
+Syntax
+
+String result = string1 + string2;
+
+Example 1
+
+public class ConcatenationDemo {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        String firstName = "John";
+
+        String lastName = "David";
+
+ 
+
+        System.out.println(firstName + lastName);
+
+ 
+
+    }
+
+ 
+
+}
+
+Output
+
+JohnDavid
+
+Example 2 (With Space)
+
+String firstName = "John";
+
+String lastName = "David";
+
+ 
+
+System.out.println(firstName + " " + lastName);
+
+Output
+
+John David
+
+Concatenating Variables
+
+String name = "Alice";
+
+int age = 22;
+
+ 
+
+System.out.println("Name : " + name);
+
+System.out.println("Age : " + age);
+
+Output
+
+Name : Alice
+
+Age : 22
+
+Concatenation with Numbers
+
+System.out.println(10 + 20);
+
+Output
+
+30
+
+But,
+
+System.out.println("10" + "20");
+
+Output
+
+1020
+
+Important Example
+
+System.out.println("Sum = " + 10 + 20);
+
+Output
+
+Sum = 1020
+
+Why?
+
+"Sum = " + 10 → "Sum = 10"
+
+"Sum = 10" + 20 → "Sum = 1020"
+
+To get the correct sum:
+
+System.out.println("Sum = " + (10 + 20));
+
+Output
+
+Sum = 30
+
+2. Increment Operator (++)
+
+The increment operator increases the value of a variable by 1.
+
+Syntax
+
+variable++;
+
+or
+
+++variable;
+
+Example
+
+int a = 10;
+
+ 
+
+a++;
+
+ 
+
+System.out.println(a);
+
+Output
+
+11
+
+Equivalent to:
+
+a = a + 1;
+
+3. Decrement Operator (--)
+
+The decrement operator decreases the value by 1.
+
+int a = 10;
+
+ 
+
+a--;
+
+ 
+
+System.out.println(a);
+
+Output
+
+9
+
+Equivalent to:
+
+a = a - 1;
+
+4. Prefix Increment
+
+The value is incremented before it is used.
+
+Example
+
+int a = 10;
+
+ 
+
+System.out.println(++a);
+
+Output
+
+11
+
+Explanation
+
+a = 10
+
+ 
+
+++a
+
+ 
+
+Increment first
+
+ 
+
+a = 11
+
+ 
+
+Print 11
+
+5. Postfix Increment
+
+The current value is used first, then incremented.
+
+Example
+
+int a = 10;
+
+ 
+
+System.out.println(a++);
+
+Output
+
+10
+
+After execution:
+
+System.out.println(a);
+
+Output
+
+11
+
+Prefix vs Postfix
+
+int a = 5;
+
+ 
+
+System.out.println(++a);
+
+Output
+
+6
+
+int b = 5;
+
+ 
+
+System.out.println(b++);
+
+Output
+
+5
+
+After that
+
+System.out.println(b);
+
+Output
+
+6
+
+6. Prefix Decrement
+
+int a = 10;
+
+ 
+
+System.out.println(--a);
+
+Output
+
+9
+
+7. Postfix Decrement
+
+int a = 10;
+
+ 
+
+System.out.println(a--);
+
+Output
+
+10
+
+After execution
+
+System.out.println(a);
+
+Output
+
+9
+
+8. Shorthand Assignment Operators
+
+Shorthand operators simplify assignment statements.
+
+Operator
+
+Meaning
+
+Equivalent
+
++=
+
+Add and assign
+
+a = a + b
+
+-=
+
+Subtract and assign
+
+a = a - b
+
+*=
+
+Multiply and assign
+
+a = a * b
+
+/=
+
+Divide and assign
+
+a = a / b
+
+%=
+
+Modulus and assign
+
+a = a % b
+
+Example: +=
+
+int a = 10;
+
+ 
+
+a += 5;
+
+ 
+
+System.out.println(a);
+
+Output
+
+15
+
+Example: -=
+
+int a = 20;
+
+ 
+
+a -= 5;
+
+ 
+
+System.out.println(a);
+
+Output
+
+15
+
+Example: *=
+
+int a = 5;
+
+ 
+
+a *= 4;
+
+ 
+
+System.out.println(a);
+
+Output
+
+20
+
+Example: /=
+
+int a = 20;
+
+ 
+
+a /= 5;
+
+ 
+
+System.out.println(a);
+
+Output
+
+4
+
+Example: %=
+
+int a = 10;
+
+ 
+
+a %= 3;
+
+ 
+
+System.out.println(a);
+
+Output
+
+1
+
+9. Ternary Operator (? :)
+
+The ternary operator is a shortcut for if-else when choosing between two values.
+
+Syntax
+
+condition ? valueIfTrue : valueIfFalse;
+
+Example 1
+
+int age = 20;
+
+ 
+
+String result = (age >= 18) ? "Eligible" : "Not Eligible";
+
+ 
+
+System.out.println(result);
+
+Output
+
+Eligible
+
+Example 2
+
+Find the larger number.
+
+int a = 10;
+
+int b = 20;
+
+ 
+
+int max = (a > b) ? a : b;
+
+ 
+
+System.out.println(max);
+
+Output
+
+20
+
+Example 3
+
+Check Even or Odd
+
+int number = 12;
+
+ 
+
+String result = (number % 2 == 0) ? "Even" : "Odd";
+
+ 
+
+System.out.println(result);
+
+Output
+
+Even
+
+10. Nested Ternary Operator
+
+int a = 15;
+
+int b = 20;
+
+ 
+
+String result = (a > b) ? "A is Greater" : "B is Greater";
+
+ 
+
+System.out.println(result);
+
+Output
+
+B is Greater
+
+11. Common Mistakes
+
+Mistake 1
+
+System.out.println("Total = " + 10 + 20);
+
+Output
+
+Total = 1020
+
+Correct
+
+System.out.println("Total = " + (10 + 20));
+
+Mistake 2
+
+Confusing Prefix and Postfix
+
+int a = 5;
+
+ 
+
+System.out.println(a++);
+
+Output
+
+5
+
+Many beginners expect 6, but the increment happens after the current value is used.
+
+Mistake 3
+
+Using the ternary operator for complex logic
+
+condition ? statement1 : statement2;
+
+Use the ternary operator only for simple decisions. For multiple conditions or complex blocks, prefer if-else.
+
+12. Interview Questions & Answers
+
+1. What is String Concatenation?
+
+Answer: It is the process of joining two or more strings using the + operator.
+
+2. What is the difference between Prefix and Postfix Increment?
+
+Prefix (++a)
+
+Postfix (a++)
+
+Increment first, then use the value
+
+Use the current value, then increment
+
+3. What is the difference between ++a and a++?
+
+Example:
+
+int a = 5;
+
+ 
+
+System.out.println(++a);
+
+Output
+
+6
+
+Example:
+
+int a = 5;
+
+ 
+
+System.out.println(a++);
+
+Output
+
+5
+
+4. What is the Ternary Operator?
+
+Answer: A shorthand replacement for a simple if-else statement that returns one of two values based on a condition.
+
+5. What is the purpose of +=?
+
+Answer: It adds a value to a variable and assigns the result back to the same variable.
+
+Example:
+
+a += 5;
+
+Equivalent to:
+
+a = a + 5;
+
+13. Practice Programs
+
+Program 1: Student Details
+
+public class Student {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        String name = "Alice";
+
+        int age = 21;
+
+ 
+
+        System.out.println("Name : " + name);
+
+        System.out.println("Age : " + age);
+
+ 
+
+    }
+
+ 
+
+}
+
+Program 2: Prefix & Postfix
+
+public class IncrementDemo {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        int a = 10;
+
+ 
+
+        System.out.println(++a);
+
+        System.out.println(a++);
+
+ 
+
+        System.out.println(a);
+
+ 
+
+    }
+
+ 
+
+}
+
+Output
+
+11
+
+11
+
+12
+
+Program 3: Ternary Operator
+
+public class VoteEligibility {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        int age = 17;
+
+ 
+
+        String result = (age >= 18) ? "Eligible to Vote" : "Not Eligible";
+
+ 
+
+        System.out.println(result);
+
+ 
+
+    }
+
+ 
+
+}
+
+Output
+
+Not Eligible
+
+Program 4: Largest Number
+
+public class LargestNumber {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        int a = 50;
+
+        int b = 80;
+
+ 
+
+        int max = (a > b) ? a : b;
+
+ 
+
+        System.out.println("Largest Number = " + max);
+
+ 
+
+    }
+
+ 
+
+}
+
+14. Practice Questions
+
+Basic
+
+Concatenate your first name and last name with a space.
+
+Print "Total = 50" using concatenation.
+
+Demonstrate prefix and postfix increment using a variable.
+
+Intermediate
+
+Find the larger of two numbers using the ternary operator.
+
+Check whether a number is even or odd using the ternary operator.
+
+Use shorthand operators (+=, -=, *=, /=, %=) on a variable and print the result after each operation.
+
+Challenge
+
+Write a Java program to:
+
+Store a student's name, marks, and attendance percentage.
+
+Print the details using concatenation.
+
+Increase the marks by 5 using +=.
+
+Determine if the student has passed (marks >= 35) using the ternary operator.
+
+15. Output Prediction (Interview Favorite)
+
+Q1
+
+int a = 5;
+
+System.out.println(a++);
+
+System.out.println(a);
+
+Output
+
+5
+
+6
+
+Q2
+
+int a = 5;
+
+System.out.println(++a);
+
+Output
+
+6
+
+Q3
+
+System.out.println("Java" + 10 + 20);
+
+Output
+
+Java1020
+
+Q4
+
+System.out.println(10 + 20 + "Java");
+
+Output
+
+30Java
