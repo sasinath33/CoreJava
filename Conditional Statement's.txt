@@ -1,0 +1,1130 @@
+Conditional Statements
+
+
+1. What are Control Statements?
+
+Control statements determine the flow of execution of a Java program.
+
+There are three types of control statements:
+
+Control Statements
+
+│
+
+├── Conditional Statements
+
+│   ├── if
+
+│   ├── if-else
+
+│   ├── else-if laddar
+
+│   └── switch
+
+│
+
+├── Looping Statements
+
+│   ├── while
+
+│   ├── do-while
+
+│   └── for
+
+│
+
+└── Jump Statements
+
+    ├── break
+
+    ├── continue
+
+    └── return
+
+In this chapter, we focus on Conditional Statements.
+
+2. if Statement
+
+Definition
+
+The if statement executes a block of code only if the condition is true.
+
+Syntax
+
+if (condition) {
+
+    // Statements
+
+}
+
+Flow Diagram
+
+Condition
+
+    │
+
+ ┌──┴──┐
+
+True  False
+
+ │      │
+
+Execute Skip
+
+Example 1: Check Voting Eligibility
+
+public class IfDemo {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        int age = 20;
+
+ 
+
+        if (age >= 18) {
+
+            System.out.println("Eligible to Vote");
+
+        }
+
+ 
+
+    }
+
+ 
+
+}
+
+Output
+
+Eligible to Vote
+
+Example 2: Positive Number
+
+int number = 10;
+
+ 
+
+if (number > 0) {
+
+    System.out.println("Positive Number");
+
+}
+
+3. if-else Statement
+
+Definition
+
+The if-else statement executes one block if the condition is true and another block if it is false.
+
+Syntax
+
+if (condition) {
+
+    // True Block
+
+} else {
+
+    // False Block
+
+}
+
+Flow Diagram
+
+Condition
+
+   │
+
+┌──┴──┐
+
+True False
+
+ │      │
+
+If    Else
+
+Example 1: Even or Odd
+
+public class EvenOdd {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        int number = 15;
+
+ 
+
+        if (number % 2 == 0) {
+
+            System.out.println("Even Number");
+
+        } else {
+
+            System.out.println("Odd Number");
+
+        }
+
+ 
+
+    }
+
+ 
+
+}
+
+Output
+
+Odd Number
+
+Example 2: Pass or Fail
+
+int marks = 45;
+
+ 
+
+if (marks >= 35) {
+
+    System.out.println("Pass");
+
+} else {
+
+    System.out.println("Fail");
+
+}
+
+4. else-if Ladder
+
+Definition
+
+The else-if ladder is used when multiple conditions need to be checked.
+
+Syntax
+
+if (condition1) {
+
+ 
+
+} else if (condition2) {
+
+ 
+
+} else if (condition3) {
+
+ 
+
+} else {
+
+ 
+
+}
+
+Example: Student Grade
+
+public class Grade {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        int marks = 82;
+
+ 
+
+        if (marks >= 90) {
+
+            System.out.println("Grade A");
+
+        } else if (marks >= 75) {
+
+            System.out.println("Grade B");
+
+        } else if (marks >= 50) {
+
+            System.out.println("Grade C");
+
+        } else {
+
+            System.out.println("Fail");
+
+        }
+
+ 
+
+    }
+
+ 
+
+}
+
+Output
+
+Grade B
+
+Example: Salary Bonus
+
+int experience = 6;
+
+ 
+
+if (experience >= 10) {
+
+    System.out.println("Bonus: 20%");
+
+} else if (experience >= 5) {
+
+    System.out.println("Bonus: 10%");
+
+} else {
+
+    System.out.println("Bonus: 5%");
+
+}
+
+5. Nested if
+
+Definition
+
+A nested if means placing one if statement inside another if statement.
+
+Syntax
+
+if (condition1) {
+
+ 
+
+    if (condition2) {
+
+ 
+
+    }
+
+ 
+
+}
+
+Example: Login Verification
+
+public class Login {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        String username = "admin";
+
+        String password = "1234";
+
+ 
+
+        if (username.equals("admin")) {
+
+ 
+
+            if (password.equals("1234")) {
+
+                System.out.println("Login Successful");
+
+            } else {
+
+                System.out.println("Incorrect Password");
+
+            }
+
+ 
+
+        } else {
+
+            System.out.println("Invalid Username");
+
+        }
+
+ 
+
+    }
+
+ 
+
+}
+
+Output
+
+Login Successful
+
+Example: Admission Eligibility
+
+int marks = 85;
+
+boolean certificate = true;
+
+ 
+
+if (marks >= 80) {
+
+ 
+
+    if (certificate) {
+
+        System.out.println("Admission Approved");
+
+    } else {
+
+        System.out.println("Certificate Required");
+
+    }
+
+ 
+
+} else {
+
+    System.out.println("Marks Not Sufficient");
+
+}
+
+6. Difference Between if, if-else, and else-if
+
+Statement
+
+Purpose
+
+If
+
+Executes code only if the condition is true
+
+if-else
+
+Chooses between two alternatives
+
+else-if
+
+Checks multiple conditions
+
+Nested if
+
+Checks one condition inside another
+
+7. Real-Time Examples
+
+ATM Withdrawal
+
+int balance = 5000;
+
+int withdraw = 3000;
+
+ 
+
+if (withdraw <= balance) {
+
+    System.out.println("Transaction Successful");
+
+} else {
+
+    System.out.println("Insufficient Balance");
+
+}
+
+Online Shopping Discount
+
+double purchase = 2500;
+
+ 
+
+if (purchase >= 2000) {
+
+    System.out.println("10% Discount Applied");
+
+} else {
+
+    System.out.println("No Discount");
+
+}
+
+Driving License Eligibility
+
+int age = 17;
+
+ 
+
+if (age >= 18) {
+
+    System.out.println("Eligible for Driving License");
+
+} else {
+
+    System.out.println("Not Eligible");
+
+}
+
+8. Common Mistakes
+
+Mistake 1: Using = Instead of ==
+
+❌ Wrong
+
+if (age = 18)
+
+✅ Correct
+
+if (age == 18)
+
+Mistake 2: Missing Curly Braces
+
+if (age >= 18)
+
+    System.out.println("Eligible");
+
+    System.out.println("Welcome");
+
+Only the first statement belongs to the if.
+
+Correct:
+
+if (age >= 18) {
+
+    System.out.println("Eligible");
+
+    System.out.println("Welcome");
+
+}
+
+Mistake 3: Wrong Order in else-if
+
+❌ Wrong
+
+if (marks >= 35) {
+
+    System.out.println("Pass");
+
+} else if (marks >= 90) {
+
+    System.out.println("Grade A");
+
+}
+
+The first condition (marks >= 35) will already match for marks of 90, so the second condition is never reached.
+
+✅ Correct
+
+if (marks >= 90) {
+
+    System.out.println("Grade A");
+
+} else if (marks >= 35) {
+
+    System.out.println("Pass");
+
+}
+
+Always check the most specific/highest condition first.
+
+9. Interview Questions & Answers
+
+1. What is an if statement?
+
+Answer: It executes a block of code only when the specified condition evaluates to true.
+
+2. What is the difference between if and if-else?
+
+If
+
+if-else
+
+Executes only when the condition is true
+
+Executes one of two blocks depending on the condition
+
+3. When should you use an else-if ladder?
+
+Answer: When you need to test multiple conditions and execute the block for the first matching condition.
+
+4. What is a nested if?
+
+Answer: An if statement placed inside another if statement.
+
+5. Can an if statement exist without an else?
+
+Answer: Yes. The else block is optional.
+
+6. Which block is executed in an else-if ladder?
+
+Answer: Only the first condition that evaluates to true is executed. The remaining conditions are skipped.
+
+10. Practice Programs
+
+Program 1: Check Positive or Negative
+
+public class PositiveNegative {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        int number = -5;
+
+ 
+
+        if (number >= 0) {
+
+            System.out.println("Positive");
+
+        } else {
+
+            System.out.println("Negative");
+
+        }
+
+ 
+
+    }
+
+ 
+
+}
+
+Program 2: Largest of Two Numbers
+
+public class Largest {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        int a = 20;
+
+        int b = 35;
+
+ 
+
+        if (a > b) {
+
+            System.out.println("A is Larger");
+
+        } else {
+
+            System.out.println("B is Larger");
+
+        }
+
+ 
+
+    }
+
+ 
+
+}
+
+Program 3: Student Grade
+
+public class StudentGrade {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        int marks = 92;
+
+ 
+
+        if (marks >= 90) {
+
+            System.out.println("Grade A");
+
+        } else if (marks >= 75) {
+
+            System.out.println("Grade B");
+
+        } else if (marks >= 50) {
+
+            System.out.println("Grade C");
+
+        } else {
+
+            System.out.println("Fail");
+
+        }
+
+ 
+
+    }
+
+ 
+
+}
+
+Program 4: Login System
+
+public class LoginDemo {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        String user = "admin";
+
+        String password = "java123";
+
+ 
+
+        if (user.equals("admin")) {
+
+ 
+
+            if (password.equals("java123")) {
+
+                System.out.println("Login Successful");
+
+            } else {
+
+                System.out.println("Wrong Password");
+
+            }
+
+ 
+
+        } else {
+
+            System.out.println("Invalid User");
+
+        }
+
+ 
+
+    }
+
+ 
+
+}
+
+11. Practice Questions
+
+Basic
+
+Check whether a number is positive or negative.
+
+Check whether a student has passed or failed.
+
+Find the larger of two numbers using if-else.
+
+Intermediate
+
+Display grades (A, B, C, or Fail) using an else-if ladder.
+
+Check whether a person is eligible to vote.
+
+Create a simple username and password verification using nested if.
+
+Challenge
+
+Write a Java program that:
+
+Stores a student's marks and attendance percentage.
+
+If marks are 35 or above, check attendance.
+
+If attendance is 75% or above, print "Eligible for Exam Certificate".
+
+Otherwise, print the appropriate message indicating why the student is not eligible.
+
+12. Output Prediction (Interview Favorite)
+
+Q1
+
+int x = 10;
+
+ 
+
+if (x > 5)
+
+    System.out.println("A");
+
+ 
+
+System.out.println("B");
+
+Output
+
+A
+
+B
+
+Q2
+
+int marks = 80;
+
+ 
+
+if (marks >= 90)
+
+    System.out.println("A");
+
+else if (marks >= 75)
+
+    System.out.println("B");
+
+else
+
+    System.out.println("C");
+
+Output
+
+B
+
+Q3
+
+int a = 5;
+
+ 
+
+if (a == 5)
+
+    System.out.println("Java");
+
+else
+
+    System.out.println("Python");
+
+Output
+
+Java
+
+13. Chapter Summary
+
+Conditional statements control the program's decision-making.
+
+Use if for a single condition.
+
+Use if-else when there are two possible outcomes.
+
+Use an else-if ladder when checking multiple conditions.
+
+Use nested if when one condition depends on another.
+
+Arrange conditions from the most specific to the least specific in an else-if ladder.
+
+Always use == to compare primitive values and equals() to compare String values.
+
+-------------
+
+1. What is a Switch Statement?
+
+A switch statement is used to select one block of code from multiple choices based on the value of an expression.
+
+Instead of writing many if-else statements, you can use switch for cleaner and more readable code.
+
+2. Syntax of Switch
+
+switch(expression) {
+
+ 
+
+    case value1:
+
+        // Statements
+
+        break;
+
+ 
+
+    case value2:
+
+        // Statements
+
+        break;
+
+ 
+
+    case value3:
+
+        // Statements
+
+        break;
+
+ 
+
+    default:
+
+        // Default statements
+
+}
+
+Flow Diagram
+
+          Expression
+
+               │
+
+      ┌────────┼────────┐
+
+      │        │        │
+
+   case1    case2    case3
+
+      │        │        │
+
+      └────────┼────────┘
+
+               │
+
+           default
+
+3. Example 1: Day of Week
+
+public class SwitchDemo {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        int day = 3;
+
+ 
+
+        switch(day) {
+
+ 
+
+            case 1:
+
+                System.out.println("Monday");
+
+                break;
+
+ 
+
+            case 2:
+
+                System.out.println("Tuesday");
+
+                break;
+
+ 
+
+            case 3:
+
+                System.out.println("Wednesday");
+
+                break;
+
+ 
+
+            case 4:
+
+                System.out.println("Thursday");
+
+                break;
+
+ 
+
+            default:
+
+                System.out.println("Invalid Day");
+
+ 
+
+        }
+
+ 
+
+    }
+
+ 
+
+}
+
+Output
+
+Wednesday
+
+4. Example 2: Calculator
+
+public class Calculator {
+
+ 
+
+    public static void main(String[] args) {
+
+ 
+
+        int a = 10;
+
+        int b = 5;
+
+        char operator = '+';
+
+ 
+
+        switch(operator) {
+
+ 
+
+            case '+':
+
+                System.out.println(a + b);
+
+                break;
+
+ 
+
+            case '-':
+
+                System.out.println(a - b);
+
+                break;
+
+ 
+
+            case '*':
+
+                System.out.println(a * b);
+
+                break;
+
+ 
+
+            case '/':
+
+                System.out.println(a / b);
+
+                break;
+
+ 
+
+            default:
+
+                System.out.println("Invalid Operator");
+
+ 
+
+        }
+
+ 
+
+    }
+
+ 
+
+}
+
+Output
+
+15
+
+5. The break Statement
+
+The break statement exits the switch after executing the matching case.
+
+Without break, execution continues into the next case (fall-through).
+
+Example (Without break)
+
+int day = 1;
+
+ 
+
+switch(day) {
+
+ 
+
+    case 1:
+
+        System.out.println("Monday");
+
+ 
+
+    case 2:
+
+        System.out.println("Tuesday");
+
+ 
+
+    case 3:
+
+        System.out.println("Wednesday");
+
+ 
+
+}
+
+Output
+
+Monday
+
+Tuesday
+
+Wednesday
+
+This is called fall-through.
+
+6. The default Case
+
+The default block runs when no case matches.
+
+int number = 8;
+
+ 
+
+switch(number) {
+
+ 
+
+    case 1:
+
+        System.out.println("One");
+
+        break;
+
+ 
+
+    default:
+
+        System.out.println("Invalid Number");
+
+ 
+
+}
+
+Output
+
+Invalid Number
+
+7. Rules of Switch Statement
+
+Expression should evaluate to:
+
+byte
+
+short
+
+int
+
+char
+
+String
+
+enum
+
+case values must be unique.
+
+default is optional.
+
+break is optional but recommended.
